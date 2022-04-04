@@ -1,10 +1,11 @@
+import 'purecss/build/pure.css'
 import './styles/main.scss'
 
 function App() {
   return (
     <div className="App">
       <header className="header">
-        <h5>Welcome</h5>
+        <button className="button-success pure-button">Success Button</button>
       </header>
     </div>
   )
