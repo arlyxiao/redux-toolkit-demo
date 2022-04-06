@@ -1,6 +1,8 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { store } from 'store'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import Expenses from 'pages/expenses'
@@ -11,13 +13,15 @@ const root = ReactDOM.createRoot(rootElement)
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="expenses" element={<Expenses />} />
+          <Route path="invoices" element={<Invoices />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 )
 

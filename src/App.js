@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Counter } from 'components/Counter'
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       >
         <Link to="/invoices">Invoices</Link> |{' '}
         <Link to="/expenses">Expenses</Link>
+        <Counter />
       </nav>
     </div>
   )
