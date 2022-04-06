@@ -3,12 +3,12 @@ import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { store } from 'store'
-import App from './App'
+import App from 'pages'
 import reportWebVitals from './reportWebVitals'
 import Expenses from 'pages/expenses'
 import Invoices from 'pages/invoices'
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root')!
 const root = ReactDOM.createRoot(rootElement)
 
 root.render(
